@@ -4,10 +4,16 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Overlay
+# Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-lineage \
+    $(LOCAL_PATH)/overlay-system
+
+PRODUCT_ENFORCE_RRO_TARGETS := *
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-lineage/lineage-sdk \
+    $(LOCAL_PATH)/overlay-system
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1520
@@ -113,5 +119,11 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
+
+# Device-specific Settings
+PRODUCT_PACKAGES += \
+    XiaomiParts \
+    XiaomiDoze
+
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/xiaomi/olive/olive-vendor.mk)

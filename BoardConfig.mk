@@ -104,6 +104,7 @@ BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
@@ -127,6 +128,9 @@ BOARD_VNDK_VERSION := current
 
 # Vendor
 TARGET_COPY_OUT_VENDOR := vendor
+
+# Security
+VENDOR_SECURITY_PATCH := 2021-01-01
 
 # Inherit from the proprietary version
 -include vendor/xiaomi/olive/BoardConfigVendor.mk

@@ -33,3 +33,23 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 BUILD_FINGERPRINT := Xiaomi/olive/olive:10/QKQ1.191014.001/V11.0.1.0.QCNCNXM:user/release-keys
 
 PRODUCT_BUILD_PROP_OVERRIDES += PRIVATE_BUILD_DESC="olive-user 10 QKQ1.191014.001 V11.0.1.0.QCNCNXM release-keys"
+
+# Additional Stuff
+
+# Face Unlock
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
+# Official
+#ANCIENT_OFFICIAL=true
+
+# OTA
+FORCE_OTA=true
+
+# Vanilla
+ANCIENT_NOGAPPS=true
+
+# Bootanimation
+TARGET_BOOT_ANIMATION_RES := 1080
+
+# Gapps
+TARGET_GAPPS_ARCH := arm64
