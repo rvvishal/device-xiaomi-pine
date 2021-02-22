@@ -14,20 +14,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
 # Inherit common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/nusantara/config/common_full_phone.mk)
 
 # Inherit device stuff
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
 
 # Device identifiers.
 PRODUCT_DEVICE := olive
-PRODUCT_NAME := lineage_olive
+PRODUCT_NAME := nad_olive
 PRODUCT_BRAND := xiaomi
 PRODUCT_MODEL := Redmi 8
 PRODUCT_MANUFACTURER := xiaomi
 TARGET_VENDOR := xiaomi
 BOARD_VENDOR := xiaomi
-DEVICE_MAINTAINER := Hrx (rvvishal)
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
