@@ -129,4 +129,4 @@ PRODUCT_PACKAGES += \
     XiaomiDoze
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/xiaomi/olive/olive-vendor.mk)
+$(call inherit-product, vendor/xiaomi/sdm439-common/sdm439-common-vendor.mk)
